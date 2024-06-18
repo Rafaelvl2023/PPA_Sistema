@@ -1,0 +1,69 @@
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    border-left: 3px solid rgb(255, 136, 0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px; /* Distância do lado esquerdo */
+    width: 5px; /* Largura da linha laranja */
+    height: 100%;
+    background-color: #FF9800; /* Cor da linha laranja */
+    z-index: 2;
+  }
+  
+  .card-inner {
+    position: relative;
+    z-index: 3;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .titleCards {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #0d95e4;
+  }
+  
+  .value {
+    font-size: 20px;
+    font-weight: bold;
+    color: #595f61;
+  }
+  .value b {
+    font-size: 23px;
+    color: #23bb28;
+  }
+  
+  .stat {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .zmdi {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .zmdi-upload {
+    color: #4CAF50;
+  }
+  
+  .zmdi-download {
+    color: #F44336;
+  }
+  
+  
+  

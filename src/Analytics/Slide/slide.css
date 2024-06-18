@@ -1,0 +1,83 @@
+.slide {
+    background-image: url('https://d335luupugsy2.cloudfront.net/cms/files/623279/1685540184/$4mv1xam2hcj');
+}
+
+.clip-part {
+    position: relative;
+    margin-left: 10px;
+    overflow: hidden; /* Evita overflow desnecessário */
+}
+
+.clip-part .background-image {
+    position: absolute;
+    top: 0;
+    left: 50%; /* Ajuste para 50% para posicionar à direita */
+    width: 50%; /* Ajuste para 50% para ocupar metade da tela */
+    height: 100%;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%, 0 0%);
+}
+
+#image-slider {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: calc(100% - 50px); /* Ajuste a largura para evitar overflow */
+    z-index: 2;
+    left: 47%;
+}
+
+#image-slider div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transform: translateX(100%);
+    transition: transform 1s ease-out;
+}
+
+#image-slider img {
+    z-index: 3;
+    display: block;
+    margin-right: -280px; /* Ajuste conforme necessário */
+}
+
+#image-slider div .text-container {
+    display: block;
+}
+
+.title {
+    display: block;
+    font-size: 38px;
+    font-weight: bold;
+    color: transparent; /* Necessário para mostrar o gradiente */
+    background: linear-gradient(to right, #ff9100, #ff7300, #ffa600); /* Gradiente aplicado ao título */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* Necessário para navegadores como o Safari */
+}
+
+.description {
+    display: block;
+    font-size: 16px;
+    color: #546078; /* Cor do texto da descrição ajustada para preto */
+}
+
+@media (max-width: 600px) {
+    #image-slider {
+        margin-left: 10px;
+        width: calc(100% - 10px); /* Ajuste a largura para telas menores */
+    }
+    #image-slider div span {
+        display: none; /* Esconde o texto nas telas menores */
+    }
+
+    .clip-part .background-image {
+        left: 10%; /* Ajuste para 50% para posicionar à direita */
+        width: 100%; /* Ajuste para 50% para ocupar metade da tela */
+    }
+
+    #image-slider {
+        left: 0%;
+    }
+}
+
